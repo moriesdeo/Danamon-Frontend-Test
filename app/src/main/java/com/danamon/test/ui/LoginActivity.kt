@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.danamon.test.R
-import com.danamon.test.databinding.ActivityMainBinding
+import com.danamon.test.databinding.ActivityLoginBinding
 import com.danamon.test.ui.utils.delegate.viewBinding
 
 class MainActivity : AppCompatActivity() {
-    private val binding by viewBinding(ActivityMainBinding::inflate)
+    private val binding by viewBinding(ActivityLoginBinding::inflate)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
