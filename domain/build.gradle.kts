@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    api(project(":core"))
     implementation(libs.material)
     testImplementation(libs.junit)
     api(libs.retrofit)

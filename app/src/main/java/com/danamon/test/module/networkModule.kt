@@ -36,8 +36,8 @@ val networkModule = module {
         }.build()
     }
 
-    single<Retrofit>(named("MOVIE_BASE_URL")) {
-        Retrofit.Builder().baseUrl(BuildConfig.MOVIE_BASE_URL + BuildConfig.TSDB_API_KEY)
+    single<Retrofit>(named("HOME_BASE_URL")) {
+        Retrofit.Builder().baseUrl(BuildConfig.HOME_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(get())).client(get()).build()
     }
 

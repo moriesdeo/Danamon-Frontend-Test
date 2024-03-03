@@ -16,17 +16,14 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "MOVIE_BASE_URL", "\"https://api.themoviedb.org/\"")
-        buildConfigField("String", "LOAD_IMAGE", "\"https://image.tmdb.org/t/p/w500\"")
-        buildConfigField("String", "TSDB_API_KEY", "\"3/\"")
+        buildConfigField("String", "HOME_BASE_URL", "\"https://jsonplaceholder.typicode.com/\"")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
@@ -49,6 +46,10 @@ dependencies {
     implementation(project(":data"))
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
