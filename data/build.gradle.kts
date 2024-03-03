@@ -38,7 +38,7 @@ dependencies {
     api(libs.androidx.core.ktx)
     api(libs.androidx.appcompat)
     api(libs.material)
-    implementation(libs.gson)
+    api(libs.gson)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
