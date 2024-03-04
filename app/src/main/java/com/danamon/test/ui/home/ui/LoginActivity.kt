@@ -1,5 +1,6 @@
 package com.danamon.test.ui.home.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import com.danamon.domain.model.request.HomeRequest
 import com.danamon.test.R
 import com.danamon.test.databinding.ActivityLoginBinding
 import com.danamon.test.ui.HomeViewModel
+import com.danamon.test.ui.home.MainActivity
 import com.danamon.test.ui.utils.delegate.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -33,6 +35,12 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initView() {
         homeViewModel.getHomeData(HomeRequest(page = 1, limit = 10))
+        binding.apply {
+            btnLogin.setOnClickListener {
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                finish()
+            }
+        }
     }
 
     private fun observe() {

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.danamon.core.extension.visible
 import com.danamon.test.R
 import com.danamon.test.databinding.ActivityMainBinding
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private val listener = NavController.OnDestinationChangedListener { _, destination, _ ->
         when (destination.id) {
-            R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications -> binding.navView.visible(
+            R.id.navigation_home, R.id.navigation_dashboard -> binding.navView.visible(
                 true
             )
 
@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         binding.navView.apply {
-            setupActionBarWithNavController(navController)
+            itemIconTintList = null
+            setupWithNavController(navController)
         }
     }
 
