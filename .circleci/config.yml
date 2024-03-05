@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Chmod permissions
-          command: cd C:\Users\Agresia Rettha\Dropbox\PC\Documents\DanamonFrontendTest chmod +x gradlew
+          command: chmod +x gradlew
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
