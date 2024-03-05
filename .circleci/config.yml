@@ -31,9 +31,9 @@ jobs:
       - restore_cache:
           key: android-orb-v1-
 
-      - run:
-          name: Chmod permissions
-          command: sudo chmod 777 ~/C:\Users\Agresia Rettha\Dropbox\PC\Downloads\gradle-7.6.4-all\gradle-7.6.4\bin
+      # - run:
+      #     name: Chmod permissions
+      #     command: sudo chmod 777 ~/C:\Users\Agresia Rettha\Dropbox\PC\Downloads\gradle-7.6.4-all\gradle-7.6.4\bin
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
