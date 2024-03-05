@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Chmod permissions
-          command: sudo chmod +x gradle
+          command: sudo chmod +x gradlew
       - run:
           name: Download Dependencies
           command: gradle androidDependencies
