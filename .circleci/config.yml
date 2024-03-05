@@ -33,10 +33,10 @@ jobs:
 
       - run:
           name: Chmod permissions
-          command: sudo chmod =x ./gradle
+          command: sudo chmod +x ./gradle
       - run:
           name: Download Dependencies
-          command: ./gradlew androidDependencies
+          command: ./gradle androidDependencies
 
       - save_cache:
           key: 'android-orb-v1-{{ epoch }}'
@@ -45,7 +45,7 @@ jobs:
             - ~/.android/cache
       - run:
           name: Run Tests
-          command: ./gradlew lint test
+          command: ./gradle lint test
       - store_test_results:
           path: app/build/test-results
       - store_artifacts:
