@@ -32,6 +32,10 @@ jobs:
           key: android-orb-v1-
 
       - run:
+          name: Gradle Init
+          command: gradle init
+
+      - run:
           name: Chmod permissions
           command: sudo chmod +x ./gradlew
       - run:
