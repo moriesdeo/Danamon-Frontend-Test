@@ -15,7 +15,7 @@ orbs:
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build:
-    executor: android/android
+    executor: android/android-machine
     steps:
       - checkout
       - restore_cache:
