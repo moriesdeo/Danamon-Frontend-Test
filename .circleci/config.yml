@@ -33,10 +33,10 @@ jobs:
 
       - run:
           name: Chmod permissions
-          command: sudo chmod +x ./gradle
+          command: sudo chmod +x gradle
       - run:
           name: Download Dependencies
-          command: ./gradle androidDependencies
+          command: gradle androidDependencies
 
       - save_cache:
           key: 'android-orb-v1-{{ epoch }}'
