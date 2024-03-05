@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Chmod permissions
-          command: sudo chmod +x gradlew./gradlew build
+          command: sudo chmod 777 ~/C:\Users\Agresia Rettha\Dropbox\PC\Downloads\gradle-7.6.4-all\gradle-7.6.4\bin
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
