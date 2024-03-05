@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Chmod permissions
-          command: sudo chmod 777 gradlew
+          command: sudo chmod 777 ./gradlew
       # - run:
       #     name: Download Dependencies
       #     command: ./gradlew androidDependencies
