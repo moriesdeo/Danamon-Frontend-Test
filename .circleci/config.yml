@@ -35,9 +35,9 @@ jobs:
           name: Gradle Init
           command: gradle init
 
-      - run:
-          name: Chmod permissions
-          command: sudo chmod +x ./gradlew
+      # - run:
+      #     name: Chmod permissions
+      #     command: sudo chmod +x ./gradlew
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
