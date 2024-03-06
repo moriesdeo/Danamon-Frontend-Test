@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "245004506177",
+    "firebase_url": "https://danamon-fe-test-default-rtdb.firebaseio.com",
     "project_id": "danamon-fe-test",
     "storage_bucket": "danamon-fe-test.appspot.com"
   },
