@@ -8,7 +8,6 @@ import com.danamon.test.databinding.FragmentDashboardBinding
 import com.danamon.test.ui.utils.delegate.viewBinding
 
 class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
-
     private val binding by viewBinding(FragmentDashboardBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
