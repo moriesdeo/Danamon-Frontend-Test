@@ -59,7 +59,6 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.core)
     testImplementation(libs.koin.test)
-    testImplementation(libs.koin.test.org)
 
     debugImplementation(libs.chucker.library)
     releaseImplementation(libs.chucker.library.no.op)
