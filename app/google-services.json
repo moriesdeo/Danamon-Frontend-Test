@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "245004506177",
+    "project_id": "danamon-fe-test",
+    "storage_bucket": "danamon-fe-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245004506177:android:f7fa4a48dda7237d2fe2c0",
+        "android_client_info": {
+          "package_name": "com.danamon.test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQWmFCDKChLnKPNO2iONb4LDyHXxFiH3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
