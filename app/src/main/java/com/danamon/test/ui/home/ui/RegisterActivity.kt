@@ -12,6 +12,7 @@ import com.danamon.test.ui.FirebaseHelper
 import com.danamon.test.ui.HomeViewModel
 import com.danamon.test.ui.utils.delegate.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import kotlin.random.Random
 
 class RegisterActivity : AppCompatActivity() {
     private val binding by viewBinding(ActivityRegisterBinding::inflate)
@@ -37,21 +38,28 @@ class RegisterActivity : AppCompatActivity() {
                         toast("Username tidak boleh kosong")
                     }
 
+                    roleEdt.text.isBlank() -> {
+                        toast("Role tidak boleh kosong")
+                    }
+
                     usernameEdt.text.length == 4 -> {
                         toast("Username Minimal 4 karakter")
                     }
 
-                    passwordEdt.text.toString().isBlank() -> {
+                    emailEdt.text.toString().isBlank() -> {
                         toast("Email tidak boleh kosong")
                     }
 
-                    !homeViewModel.isValidEmail(passwordEdt.text.toString()) -> {
+                    !homeViewModel.isValidEmail(emailEdt.text.toString()) -> {
                         toast("Email tidak valid")
                     }
 
                     else -> {
                         FirebaseHelper.setData(
-                            usernameEdt.text.toString(), passwordEdt.text.toString()
+                            usernameEdt.text.toString(),
+                            emailEdt.text.toString(),
+                            roleEdt.text.toString(),
+                            Random.nextInt(1, 1000)
                         )
                         finish()
                     }

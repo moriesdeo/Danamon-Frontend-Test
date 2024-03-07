@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/passwordEdt"
+        android:id="@+id/emailEdt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints="name"
@@ -33,14 +33,26 @@
         app:layout_constraintStart_toStartOf="@+id/usernameEdt"
         app:layout_constraintTop_toBottomOf="@+id/usernameEdt" />
 
+    <EditText
+        android:id="@+id/roleEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:hint="role"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/emailEdt"
+        app:layout_constraintStart_toStartOf="@+id/emailEdt"
+        app:layout_constraintTop_toBottomOf="@+id/emailEdt" />
+
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:text="Register"
-        app:layout_constraintEnd_toEndOf="@+id/passwordEdt"
-        app:layout_constraintStart_toStartOf="@+id/passwordEdt"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEdt" />
+        app:layout_constraintEnd_toEndOf="@+id/roleEdt"
+        app:layout_constraintStart_toStartOf="@+id/roleEdt"
+        app:layout_constraintTop_toBottomOf="@+id/roleEdt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

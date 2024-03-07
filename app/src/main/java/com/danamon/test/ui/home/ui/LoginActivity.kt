@@ -45,17 +45,18 @@ class LoginActivity : AppCompatActivity() {
                         toast("Username Minimal 4 karakter")
                     }
 
-                    passwordEdt.text.toString().isBlank() -> {
+                    emailEdt.text.toString().isBlank() -> {
                         toast("Email tidak boleh kosong")
                     }
 
-                    !homeViewModel.isValidEmail(passwordEdt.text.toString()) -> {
+                    !homeViewModel.isValidEmail(emailEdt.text.toString()) -> {
                         toast("Email tidak valid")
                     }
 
                     else -> {
-                        FirebaseHelper.getData(onDataChange = {
-                            if (usernameEdt.text.toString() == it.register?.name && passwordEdt.text.toString() == it.register?.email) {
+                        FirebaseHelper.getData(
+                            username = usernameEdt.text.toString(), onDataChange = {
+                                if (usernameEdt.text.toString() == it.name && emailEdt.text.toString() == it.email) {
                                 startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                                 finish()
                             } else {
