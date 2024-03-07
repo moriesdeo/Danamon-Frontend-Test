@@ -7,4 +7,12 @@
     android:orientation="vertical"
     tools:context=".ui.home.ui.dashboard.DashboardFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/registerRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_register" />
+
 </LinearLayout>
