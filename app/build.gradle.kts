@@ -1,5 +1,4 @@
-import org.apache.tools.ant.util.JavaEnvUtils.VERSION_1_8
-
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
